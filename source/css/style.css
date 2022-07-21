@@ -3,8 +3,8 @@ body{
 }
 nav{
     width: 100%;
-    height 60px;
-    background: #123;
+    height: 60px;
+    background: #344051;
 }
 .logo{
     color: #fff;
@@ -26,4 +26,265 @@ nav{
     margin-right: 40px;
     font-size: 16px;
     text-transform: uppercase;
+}
+.main{
+    width: 100%; 
+    background:url(../img/%D0%9F%D0%B0%D1%80%D0%B5%D0%BD%D1%8C%201.png) 90% 100% no-repeat , url(../img/%D1%84%D0%BE%D0%BD%201.png);
+    height: calc(100% - 60px);
+}
+.title_cont{
+    float: left;
+    margin:432px 0px 0px 334px;
+    text-align: center;
+    color: #344051;
+}
+.title_cont h1{
+    font-size: 60px;
+    font-weight: bold;
+}
+.title_cont h4{
+    margin-top: 40px;
+    font-size: 21px;
+    color: #79818d;
+}
+.title_cont input{
+    height: 40px;
+    text-align: center;
+    border: 2px solid #6d7682;
+    background: none;
+    border-radius: 8px;
+    color: #6d7682;
+    font-size: 16px;
+    padding: 0px 16px;
+    margin-top: 58px;
+    margin: 58px 14px 0px 14px;
+}
+.cherta{
+    padding-top: 10px;
+    text-align: center;
+}
+.inf{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin: 90px 0px 0px 0px;
+    font-size: 31px;
+}
+.img_mini{
+    text-align: center;
+    margin: 90px 0px 0px 0px;
+}
+.inf_text{
+    text-align: left;
+    margin: 110px 0px 0px 579px;
+}
+.rezum input{
+    text-align: center;
+    margin: 30px 882px 40px 882px;
+    border: 2px solid #6d7682;
+    background: none;
+    border-radius: 8px;
+    color: #6d7682;
+    font-size: 16px;
+    padding: 0px 16px;
+}
+.naviki{
+    width: 1920px;
+    background: url(../img/%D1%87%D1%82%D0%BE%20%D1%8F%20%D1%83%D0%BC%D0%B5%D1%8E%20%D1%84%D0%BE%D0%BD.png) 90% 100% no-repeat ;
+    height: 499px;
+}
+.cherta_01{
+    text-align: center;
+    
+}
+.naviki h2{
+    font-size: 34px;
+    text-align: center;
+    padding-top: 101px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+.naviki_02 li{
+    float: left;
+    padding-left: 115px;
+    font-size: 17px;
+}
+.naviki_02 h3{
+    margin-top: 30px;
+    font-size: 19px;
+    color: coral;
+    text-transform: uppercase;
+}
+.keys{
+    text-align: center;  
+}
+.keys_02{
+    font-size: 17px;
+}
+.keys h2{
+    font-size: 34px;
+    text-transform: uppercase;
+    margin-top: 101px;
+}
+.keys_opis{
+    margin-top: 87px;
+    font-size: 17px;
+}
+.keys_foto{
+    margin-top: 38px;
+}
+.project_name{
+    float:right;
+    margin-right: 387px;
+    text-align: left;
+}
+.client{
+    margin-left: 389px;
+    text-align: left;
+}
+.web{
+    margin-left: 389px;
+    text-align: left;
+}
+.keys_02 h3{
+    margin-top: 8px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.keys input{
+    height: 44px;
+    text-align: center;
+    border: 2px solid #63B5AE;
+    background: #63B5AE;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    padding: 0px 16px;
+    margin-top: 25px;
+    margin: 15px 0px 0px 154px;
+}
+.stoimost_02{
+    margin-right: 517px;
+    
+}
+.stoimost h2{
+    text-align: center;
+    font-size: 46px;
+    margin-top: 157px;
+}
+.opros{
+    margin: 65px 0px 0px 517px;
+    font-size: 29;
+    padding-bottom: 116px;
+}
+.tipsayt{
+    font-size: 29px;
+    margin:  65px 0px 0px 87px;
+}
+.disain{
+    font-size: 29px;
+    margin: 75px 0px 0px 87px;
+}
+.adaptivnost{
+    font-size: 29px;
+    margin: 85px 0px 0px 87px;
+}
+.linia{
+    text-align: center;
+}
+.srock{
+    font-size: 21px;
+    margin: 5px 0px 0px 600px;
+}
+.stoimost{
+    font-size: 21px;
+    margin: 15px 0px 150px 0px;
+}
+.stat h2{
+    font-size: 34px;
+    text-align: center;
+    padding-top: 90px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.stat{
+    height: 499px;
+    width: 1920px;
+    background: url(../img/%D1%84%D0%BE%D0%BD%20%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B0.png) 90% 100%/cover no-repeat ;
+}
+.stat li{
+    text-transform: uppercase;
+    padding-top: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 17px;
+    float: left;
+    margin: 120px 0px 0px 247px;
+}
+.otzivi h2{
+    text-align: center;
+    font-size: 34px;
+    margin: 100px 0px 20px 0px;
+}
+.foto_otzivi{
+    margin: 55px 0px 48px 0px;
+    text-align: center;
+}
+.otzivi{
+    text-align: center;
+    font-size: 17px;
+}
+.kontakt{
+    width: 1920px;
+    height: 808px;
+    background: url(../img/%D1%84%D0%BE%D0%BD%203.png);
+}
+.kontakt{
+    font-size: 17px;
+    color: #fff;
+    text-align: center;
+}
+.kontakt h2{
+    text-transform: uppercase;
+    margin: 101px 0px 0px 0px;
+    font-size: 34px;
+    padding-top: 101px;
+    padding-bottom: 20px;
+}
+.kontakt_2{
+    padding-top: 43px;
+}
+.kontakt h3{
+    text-transform: uppercase;
+    font-size: 22px;
+    margin: 57px 0px 0px 0px;
+}
+.kontant_1 li{
+    float: left;
+    font-size: 17px;
+}
+.otprav input{
+    height: 40px;
+    text-align: center;
+    border: 2px solid #fff;
+    background: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    padding: 0px 16px;
+    margin-top: 28px;
+    margin: 28px 14px 0px 14px;
+}
+.opros_2{
+}
+.close{
+    width: 1920px;
+    height: 60px;
+    background:url(../img/%D0%BF%D0%BB%D0%B0%D1%88%D0%BA%D0%B0%20%D0%BD%D0%B8%D0%B7.png);
+}
+.close{
+    color: #fff;
+    text-align: center;
+    font-size: 13px;
+    padding-top: 30px;
 }
