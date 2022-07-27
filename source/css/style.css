@@ -1,10 +1,78 @@
 body{
     font-family: Arial, sans-serif;
 }
+.preloader {
+  
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #e0e0e0;
+  z-index: 1001;
+}
+
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: #337ab7;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-bounce {
+
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
 nav{
     width: 100%;
     height: 60px;
     background: #344051;
+    position: fixed;
+    z-index: 100;
 }
 .logo{
     color: #fff;
@@ -12,6 +80,8 @@ nav{
     line-height: 60px;
     padding-left: 388px;
     float: left;
+    animation: comming 1.5s ease;
+    z-index: 100;
     
 }
 .menu{
@@ -26,17 +96,72 @@ nav{
     margin-right: 40px;
     font-size: 16px;
     text-transform: uppercase;
+    -webkit-animation: topshift 1s ease forwards;
+    -o-animation: topshift 1s ease forwards;
+    animation: topshift 1s ease forwards;
+    opacity: 0;
+}
+.menu li:nth-child(2){
+    animation-delay: 0.4s;
+}
+.menu li:nth-child(3){
+    animation-delay: 0.8s;
+}
+.menu li:nth-child(4){
+    animation-delay: 1.2s;
+}
+.menu li:nth-child(5){
+    animation-delay: 1.6s;
+}
+.menu li:nth-child(6){
+    animation-delay: 2s;
+}
+.menu li a{
+    transition: all 0.1s;
+    color: white;
+    transform: scale(1);
+    display: inline-block;
+}
+.menu li a:visited{
+    color: white;
+}
+.menu li a:hover{
+    color: #e88604;
+    
+}
+.menu li a:active{
+    transform: scale(1.1);
+}
+main{
+    width: 100%;
+    height: 100%;
 }
 .main{
     width: 100%; 
     background:url(../img/%D0%9F%D0%B0%D1%80%D0%B5%D0%BD%D1%8C%201.png) 90% 100% no-repeat , url(../img/%D1%84%D0%BE%D0%BD%201.png);
-    height: calc(100% - 60px);
+    height: 100%;
+}
+.title_cont input{
+    transition: all 0.2s;
+    transform: scale(1);
+}
+.title_cont input:hover{
+    background: #6d7682;
+    color: white;
+}
+.title_cont input:active{
+    transform: scale(1.1);
 }
 .title_cont{
     float: left;
     margin:432px 0px 0px 334px;
     text-align: center;
     color: #344051;
+    opacity: 0;
+    -webkit-animation: titlemove 1s ease forwards;
+    -o-animation: titlemove 1s ease forwards;
+    animation: titlemove 1s ease forwards;
+    animation-delay: 2.4s;
 }
 .title_cont h1{
     font-size: 60px;
@@ -58,6 +183,34 @@ nav{
     padding: 0px 16px;
     margin-top: 58px;
     margin: 58px 14px 0px 14px;
+}
+@keyframes comming{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes topshift{
+    from{
+        opacity: 0;
+        margin-top: -80px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+@keyframes titlemove{
+    from{
+        opacity: 0;
+        margin-left: -500px;
+    }
+    to{
+        opacity: 1;
+        margin-left: 404px;
+    }
 }
 .cherta{
     padding-top: 10px;
@@ -87,14 +240,27 @@ nav{
     color: #6d7682;
     font-size: 16px;
     padding: 0px 16px;
+    transition: all 0.2s;
+    transform: scale(1);
 }
+.rezum input:hover{
+    background: #6d7682;
+    color: white;
+}
+.rezum input:active{
+    transform: scale(1.1);
+}
+
 .naviki{
     width: 1920px;
     background: url(../img/%D1%87%D1%82%D0%BE%20%D1%8F%20%D1%83%D0%BC%D0%B5%D1%8E%20%D1%84%D0%BE%D0%BD.png) 90% 100% no-repeat ;
     height: 499px;
+    transition: all 5s;
+    transform: scale(1);
 }
 .cherta_01{
     text-align: center;
+    padding-bottom: 90px;
     
 }
 .naviki h2{
@@ -114,6 +280,9 @@ nav{
     font-size: 19px;
     color: coral;
     text-transform: uppercase;
+}
+.naviki img:hover{
+    transform: scale(1.1);
 }
 .keys{
     text-align: center;  
@@ -162,44 +331,93 @@ nav{
     padding: 0px 16px;
     margin-top: 25px;
     margin: 15px 0px 0px 154px;
+    transition: all 0.2s;
+    transform: scale(1);
 }
-.stoimost_02{
-    margin-right: 517px;
+
+.keys input:hover{
+    border: 2px solid #83B5AE;
+    background: #83B5AE;
+    color: white;
+    color: ;
+}
+
+.keys input:active{
+    transform: scale(1.1)
+}
+
+.calculator{
+    padding-bottom: 84px;
+}
+.calculator_container{
+    width: 1080px;
+    margin: 0 auto;
+    padding-top: 74px;
+}
+
+.calculator_container h2{
+     text-align: center;
+    width: 358px;
+    font-size: 43px;
+    margin: 0px auto 50px;
     
 }
-.stoimost h2{
-    text-align: center;
-    font-size: 46px;
-    margin-top: 157px;
+.calculator_inner{
+    width: 890px;
+    margin: 0 auto;
+    padding-bottom: 50px;
 }
-.opros{
-    margin: 65px 0px 0px 517px;
-    font-size: 29;
-    padding-bottom: 116px;
-}
-.tipsayt{
+
+.calculator_inner h3{
     font-size: 29px;
-    margin:  65px 0px 0px 87px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
 }
-.disain{
-    font-size: 29px;
-    margin: 75px 0px 0px 87px;
+.calculator_inner select{
+    margin-bottom: 44px;
 }
-.adaptivnost{
-    font-size: 29px;
-    margin: 85px 0px 0px 87px;
+
+.calculator_inner hr{
+    height: 2px;
+    border: none;
+    background: #eee;
+    width: 100%;
+    margin: 0 auto 24px;
 }
-.linia{
-    text-align: center;
+
+.mySelect{
+    display: block;
+    width: 890px;
+    height: 54px;
+    background: #eeeeee;
+    padding-left: 24px;
+    font-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background:  url(../img/select.png) 98% 54%/auto no-repeat, #eee;
 }
-.srock{
+
+.days{
+    margin-bottom: 18px;
     font-size: 21px;
-    margin: 5px 0px 0px 600px;
+    
 }
-.stoimost{
+
+.price{
+    margin-bottom: 18px;
     font-size: 21px;
-    margin: 15px 0px 150px 0px;
 }
+
+.calculator_footer .text{
+    float: left;
+}
+
+.calculator_footer .digit{
+    font-size: 29px;
+    float: right;
+}
+
 .stat h2{
     font-size: 34px;
     text-align: center;
@@ -210,7 +428,10 @@ nav{
 .stat{
     height: 499px;
     width: 1920px;
-    background: url(../img/%D1%84%D0%BE%D0%BD%20%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B0.png) 90% 100%/cover no-repeat ;
+    background: url(../img/%D1%84%D0%BE%D0%BD%20%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B0.png) center/cover fixed no-repeat ;
+    background-attachment: fixed;
+    transition: all 0.4s;
+    transform: scale(1);
 }
 .stat li{
     text-transform: uppercase;
@@ -220,6 +441,9 @@ nav{
     font-size: 17px;
     float: left;
     margin: 120px 0px 0px 247px;
+}
+.stat img:hover{
+    transform: scale(1.1);
 }
 .otzivi h2{
     text-align: center;
@@ -233,50 +457,129 @@ nav{
 .otzivi{
     text-align: center;
     font-size: 17px;
+    padding-bottom: 133px;
 }
-.kontakt{
-    width: 1920px;
-    height: 808px;
-    background: url(../img/%D1%84%D0%BE%D0%BD%203.png);
+
+.contacts{
+    background: url(../img/%D1%84%D0%BE%D0%BD%203.png) center/cover no-repeat;
+    color: white;
 }
-.kontakt{
-    font-size: 17px;
-    color: #fff;
+
+.contacts_container{
+    width: 734px;
+    margin: 0 auto;
+    padding-bottom: 68px;
+}
+
+.contacts_container h2{
     text-align: center;
-}
-.kontakt h2{
+    width: 390px;
+    font-size: 33px;
+    margin: 0px auto 30px;
+    padding-bottom: 5px;
     text-transform: uppercase;
-    margin: 101px 0px 0px 0px;
-    font-size: 34px;
-    padding-top: 101px;
-    padding-bottom: 20px;
+    padding-top: 100px;
 }
-.kontakt_2{
-    padding-top: 43px;
+
+.contacts_container hr{
+    height: 4px;
+    border: none;
+    background: #d17700;
+    width: 80px;
+    margin: 0 auto 32px;
 }
-.kontakt h3{
-    text-transform: uppercase;
-    font-size: 22px;
-    margin: 57px 0px 0px 0px;
-}
-.kontant_1 li{
-    float: left;
-    font-size: 17px;
-}
-.otprav input{
-    height: 40px;
+
+.contacts_subscription{
     text-align: center;
-    border: 2px solid #fff;
-    background: none;
-    border-radius: 8px;
-    color: #fff;
     font-size: 16px;
-    padding: 0px 16px;
-    margin-top: 28px;
-    margin: 28px 14px 0px 14px;
+    margin-bottom: 48px;
 }
-.opros_2{
+
+.contacts_data_item{
+    float: left;
+    width: 154px;
+    text-align: center;
+    margin: 0 45px;
 }
+
+.contacts_data_item img{
+    height: 24px;
+    margin-bottom: 16px;
+    
+}
+
+.contacts_data_item p{
+    font-size: 16px;
+}
+
+.contacts_container h3{
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 46px;
+    font-size: 21px;
+    text-transform: uppercase;
+}
+
+.contacts_inputs input{
+    display: block;
+    width: 352px;
+    float: left;
+    height: 34px;
+    padding-left: 14px;
+    margin-bottom: 14px;
+    background: rgba(210, 214, 220, 0.93);
+    font-size: 16px;
+}
+
+.contacts_inputs .secondInput{
+    float: right;
+}
+
+.contacts_container textarea{
+    display: block;
+    width: 100%;
+    resize: none;
+    padding-top: 10px;
+    padding-left: 15px;
+    background: rgba(220, 224, 230, 0.93);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.contacts_container input[type="submit"]{
+    display: block;
+    margin: 0 auto;
+    background: none;
+    color: white;
+    border: 2px solid white;
+    height: 46px;
+    width: 124px;
+    border-radius: 8px;
+    font-size: 20px;
+    margin-bottom: 76px;
+    transition: all 0.4s;
+    transform: scale(1);
+        
+}
+.contacts_container input:hover{
+    transform: scale(1.1);
+}
+
+.contacts_social{
+    width: 422px;
+    margin: 0 auto;
+    
+}
+
+.contacts_social a{
+    display: block;
+    float: left;
+    margin: 0 20px;
+}
+.contacts_social img{
+    height: 30px;
+}
+
 .close{
     width: 1920px;
     height: 60px;
